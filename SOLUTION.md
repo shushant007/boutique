@@ -13,3 +13,5 @@ kind create cluster --name qa-cluster --config kind-config/config.yaml
 
 - After the cluster is created and adservice was pointed to the image which was not present on the google image hub so i changed the image to use, it was earlier 3.0.1 and i changed it to 0.3.4
 ImagePullBackOff 
+
+- Since the port 7070 was not exposed in the environment resource in cartservice yaml file it was failing, so i added the port there to be exposed .
