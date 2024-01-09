@@ -15,3 +15,5 @@ kind create cluster --name qa-cluster --config kind-config/config.yaml
 ImagePullBackOff 
 
 - Since the port 7070 was not exposed in the environment resource in cartservice yaml file it was failing, so i added the port there to be exposed .
+
+- Now the error is coming due to redis service of liveness probe issue, so i changed the name used there to the cluster name which i kept as qa-cluster.
